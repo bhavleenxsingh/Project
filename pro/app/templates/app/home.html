@@ -1,0 +1,122 @@
+{% load static %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tagliatelle">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<style>
+
+body {
+      background-color: #F5F5DC;
+      margin: 0;
+      padding: 0; 
+    }
+
+.heading1 {
+    text-align: center;
+    justify-content: center;
+    font-family:"Luchador", cursive;
+    font-size: 60px;
+}
+.heading2 {
+    text-align: center;
+    justify-content: center;
+    font-family:  "Pecorino", cursive;
+    font-size: 25px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.centered-card {
+           display: inline-block; 
+           margin: 0 10px; 
+          vertical-align: right; 
+           border: 1px solid  #D2B48C;
+          padding: 20px; 
+           border-radius: 25px;
+          font-family: Arial, sans-serif;
+          background-color: #D2B48C;
+
+        }
+
+
+.img {
+      width : 400px;
+      height : 300px;
+      object-fit: cover;
+border-radius: 25px;
+}
+
+.btn {
+      font-family: Verdana, sans-serif; 
+      padding: 10px 30px; 
+      border: 2px solid #ccc; 
+    border-radius: 20px;
+      background-color: #f0f0f0
+    }
+
+</style>
+
+</head>
+  <body><br>
+  <h4 class = "heading2"> Heartily Welcome to </h4>
+      <h1 class = "heading1"> The Italiano</h1>
+  <br><br>
+
+<div class="row">
+  <div class="centered-card">
+
+  <div class="card">
+    <img src="{% static 'images/Pizza.jpg' %}" class = "img">
+    <div class="card-body">
+      <h2 class="card-title">Pizza</h2>
+      <p class="card-text">Fresh Toppings and Cheesiest Cheese!</p><br>
+      <a href="#" class="btn btn-primary">Customize</a>              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+
+    </div>
+  </div>
+  </div>
+  <br><br>
+
+
+  <div class="centered-card">
+  <div class="card" >
+    <img src="{% static 'images/Alfredo Pasta.jpg' %}" class = "img">
+    <div class="card-body">
+      <h2 class="card-title">Alfredo Pasta</h2>
+      <p class="card-text">Savory Creaminess: Freshly prepared Alfredo Pasta</p><br>
+      <a href="#" class="btn btn-primary">Customize</a>            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+
+    </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="centered-card">
+  <div class="card">
+    <img src="{% static 'images\Lasagna.jpeg' %}" class = "img">
+    <div class="card-body">
+      <h2 class="card-title">Lasagna</h2>
+      <p class="card-text">Hearty Layers: Classic Homemade Lasagna</p> <br>
+      <a href="#" class="btn btn-primary">Customize</a>        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+
+    </div>
+  </div>
+  </div></div>
+
+
+</body>
+</html>
