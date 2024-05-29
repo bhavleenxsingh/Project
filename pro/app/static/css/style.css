@@ -1,0 +1,121 @@
+/* CSS */
+/* styles.css */
+
+/* Resetting default margin and padding for all elements */
+* {
+        margin: 0;
+        padding: 0;
+}
+
+body {
+        background-color: #F5F5DC;
+        margin: 0;
+        padding: 0; 
+    }
+
+.carousel-item {
+  
+    
+        width: 100%; 
+        height: 100%; 
+}
+
+.carousel {
+        width:100%; 
+        height: auto; 
+        overflow: hidden;
+        white-space: nowrap;
+}
+
+.heading {
+        text-align: center;
+        justify-content: center;
+        font-family:"Luchador", cursive;
+        font-size: 120px;
+        color: rgb(247, 210, 5);
+
+}
+.heading1 {
+        text-align: center;
+        justify-content: center;
+        font-family:"Luchador", cursive;
+        font-size: 60px;
+        color: rgb(247, 7, 7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.heading2 {
+        text-align: center;
+        justify-content: center;
+        font-family:  "Pecorino", cursive;
+        font-size: 40px;
+        color: #fd0303;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+}
+
+
+.container-card{
+
+        display: flex;
+        justify-content: center;
+}
+
+
+.centered-card {
+        justify-content: center;
+        align-items: center;
+        display: inline-block; 
+        margin-top: 33%;
+        vertical-align: right; 
+        border: 5px solid  #D2B48C;
+        padding: 10px; 
+        border-radius: 25px;
+        font-family: Arial, sans-serif;
+        background-color: #D2B48C;
+        width: 33%;
+
+        }
+
+
+.menu-imgs {
+        width : 100%;
+        height : 100%;
+        object-fit: fill;
+        border-radius: 25px;
+}
+
+.btn {
+        font-family: Verdana, sans-serif; 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 10px;
+        background-color: #f0f0f0
+    }
+
+
+.title-pic {
+        max-width: 100%; /* Set maximum width to 100% of its container */
+        max-height: 100%; /* Set maximum height to 100% of its container */
+        width: auto; /* Allow the width to adjust proportionally */
+        height: auto; /* Allow the height to adjust proportionally */
+        display: block; /* Ensure the image behaves as a block element */
+        margin: 0 auto;
+
+}
+
+.carousel-pic {
+        width: 100%;
+        height: 150px; /* or any desired height */
+        object-fit: cover;
+        display: flex;
+}
+
+
+.container {
+        display: flex;
+}
