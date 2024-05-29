@@ -1,0 +1,27 @@
+/* CSS */
+/* styles.css */
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title-pic {
+      max-width: 100%; /* Set maximum width to 100% of its container */
+    max-height: 100%; /* Set maximum height to 100% of its container */
+    width: auto; /* Allow the width to adjust proportionally */
+    height: auto; /* Allow the height to adjust proportionally */
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto;
+
+}
+
+.carousel-pic {
+ width: 100%;
+    height: 400px; /* or any desired height */
+    object-fit: cover;
+display: flex;
+}
+
+
