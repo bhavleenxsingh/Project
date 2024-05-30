@@ -78,9 +78,8 @@ WSGI_APPLICATION = 'pro.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "Project",
+        "NAME": "Italiano",
         "USER": "root",
-        
         "PASSWORD": "admin",
         "HOST": "localhost",
         "PORT": "3306",

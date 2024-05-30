@@ -1,7 +1,7 @@
 from django import forms
-from .models import signup
+from .models import signupf
 
 class signupform(forms.ModelForm):
-    model = signup
+    model = signupf
     fields = '__all__'
     
