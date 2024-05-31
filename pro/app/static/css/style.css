@@ -21,7 +21,7 @@ body {
 }
 
 .carousel {
-        width:100%; 
+        width:100%;
         height: auto; 
         overflow: hidden;
         white-space: nowrap;
@@ -78,13 +78,15 @@ body {
         font-family: Arial, sans-serif;
         background-color: #D2B48C;
         width: 33%;
+        margin-inline: 30px;
+        margin-bottom: 33%;
 
         }
 
 
 .menu-imgs {
         width : 100%;
-        height : 100%;
+        height : 220px;
         object-fit: fill;
         border-radius: 25px;
 }
@@ -95,6 +97,7 @@ body {
         border: 1px solid #ccc; 
         border-radius: 10px;
         background-color: #f0f0f0
+        
     }
 
 
@@ -109,11 +112,10 @@ body {
 }
 
 .carousel-pic {
- width: 100%;
-    height: 400px; /* or any desired height */
-    object-fit: cover;
-display: flex;
-
+        width: 100%;
+        height: 400px; /* or any desired height */
+        object-fit: cover;
+        display: flex;
         width: 100%;
         height: 150px; /* or any desired height */
         object-fit: cover;
@@ -121,6 +123,36 @@ display: flex;
 }
 
 
-.container {
-        display: flex;
+.footer-pi {
+        max-width: 100%; /* Set maximum width to 100% of its container */
+        max-height: 100%; /* Set maximum height to 100% of its container */
+        width: auto; /* Allow the width to adjust proportionally */
+        height: auto; /* Allow the height to adjust proportionally */
+        display: block; /* Ensure the image behaves as a block element */
+        margin: 0 auto;
+
 }
+
+.w-100 {
+        width: 100% !important;
+        height: 600px;
+}
+
+.background {
+        /* background-image: url('{% static images/Pizza.jpg %}'); */
+        background-size: cover;       /* Ensures the image covers the whole element */
+        background-position: center;  /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-attachment: fixed; /* Keeps the background fixed during scroll */
+        height: 400px;                /* Sets the height to 100% of the viewport height */
+        width: 1000px;                  /* Sets the width to 100% of the parent element */
+        filter: blur(5px);
+        }
+
+@media (max-width: 768px) {
+            .responsive-background {
+                background-size: contain; /* Fits the image within the element */
+            }
+}
+
+
