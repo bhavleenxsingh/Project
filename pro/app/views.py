@@ -56,11 +56,18 @@ def signup(request):
         synup = signupform(request.POST, request.FILES)
         print(synup)
         if synup.is_valid():
-            print(synup)
-            synup.save()
-            return redirect(success)
+            print("jhsdon")
+            password = request.POST.get('Password')
+            confirm_password = request.POST.get('Confirm_Password')
+            if password == confirm_password:
+                print("equal    ")
+                print(synup)
+                synup.save()
+                return redirect(success)
+            else :
+                return HttpResponse("Passwords do not match")
         else :
-            return HttpResponse("Error in submitting form.")
+            return HttpResponse("Form Invalid.")
     else:
         synup = signupform()
         return render(request, "app/signup.html", {'synup':synup})
