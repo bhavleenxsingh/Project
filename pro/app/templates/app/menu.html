@@ -1,0 +1,100 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+{% block title %}Your Cart{% endblock %}
+
+{% block content %}
+<br>
+<div class = "centered-container">
+<div class = "centered-text">
+
+<h1 >MENU</h1>
+</div>
+</div>
+<div class="container-card"> <!--cards-->
+  <div class="row">
+
+    <div class="col">
+      <div class="card centered-card" style="width: 18rem;">
+        <img src="{% static 'images/Pizza.jpg' %}" class="menu-imgs" alt="Pizza">
+        <div class="card-body">
+          <h5 class="card-title">Pizza</h5>
+          <p class="card-text">Fresh Toppings and Cheesiest Cheese.</p>
+          <a href="{% url 'pizza' %}" class="btn">Customize</a>
+          <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card centered-card" style="width: 18rem;">
+        <img src="{% static 'images/Alfredo Pasta.jpg' %}" class="menu-imgs" alt="Alfredo Pasta">
+        <div class="card-body">
+          <h5 class="card-title">Alfredo Pasta</h5>
+          <p class="card-text">Alfredo Pasta By Italian Chefs with Unmatched Aroma</p>
+          <a href="{% url 'pasta' %}" class="btn" font-size = 12px>Customize</a> 
+          <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card centered-card" style="width: 18rem;">
+        <img src="{% static 'images/Lasagna.jpeg' %}" class="menu-imgs" alt="Lasagna">
+        <div class="card-body">
+          <h5 class="card-title">Lasagna</h5>
+          <p class="card-text">Layered with Deliciousness and Love.</p>
+          <a href="{% url 'lasagna' %}" class="btn">Customize</a>
+          <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </div>
+<div class="container-card">  <!-- cards 2nd row-->
+    <div class="row">
+    <div class="col">
+        <div class="card centered-card" style="width: 18rem;">
+            <img src="{% static 'images\Cheesecake.jpg' %}" class="menu-imgs" alt="Cheesecake">
+            <div class="card-body">
+            <h5 class="card-title">Cheesecake</h5>
+            <p class="card-text">Flavourful Cheesecake - A Chocolate Heaven!</p>
+            <div class = "centered-text"><a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card centered-card" style="width: 18rem;">
+            <img src="{% static 'images\Chocolava.jpg' %}" class="menu-imgs" alt="Choco Lava Cake">
+            <div class="card-body">
+            <h5 class="card-title">Choco Lava Cake</h5>
+            <p class="card-text">Mini Cake with a Volcano of Hot Chocolate!</p>
+            <div class = "centered-text"><a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="card centered-card" style="width: 18rem;">
+            <img src="{% static 'images\Cappuccino.jpg' %}" class="menu-imgs" alt="Cappuccino">
+            <div class="card-body">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">Smoldering Hot Cappuccino for the Coffee Lovers!</p>
+            <div class = "centered-text"><a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+

@@ -24,18 +24,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Menu</a>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Contact Us!</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Feedback</a></li>
-          </ul>
+            <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'cart' %}">Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'signup' %}">Signup</a>
@@ -43,7 +36,15 @@
         <li class="nav-item">
           <a class="nav-link active" aria-disabled="true" href="{% url 'login' %}">Login</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true" href="{% url 'contact' %}">Contact Us!</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true" href="{% url 'feedback' %}">Feedback</a>
+        </li>
       </ul>
+
+        
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -58,6 +59,8 @@
     <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
     <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
     <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -77,6 +80,16 @@
         <p class="heading2">Alfredo Pasta by The Italiano.</p>
       </div>
     </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'images\Cheesecake.jpg' %}" class="d-block w-100" alt="Alfredo Pasta" style="object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="heading">The Italiano</h1>
+        <h5 class="heading1">Chocolate Cheesecake</h5>
+        <p class="heading2">Chocolate Cheesecake by The Italiano.</p>
+      </div>
+    </div>
+
 
     <div class="carousel-item">
       <img src="{% static 'images/Lasagna.jpeg' %}" class="d-block w-100" alt="Lasagna" style="object-fit: cover;">
@@ -99,6 +112,8 @@
 </div>
 </div>
 {% block content %}
+<br>
+<h1 class = "centered-text">Our Specialities !!</h1>
 <div class="container-card"> <!--cards-->
   <div class="row">
 
@@ -109,7 +124,19 @@
           <h5 class="card-title">Pizza</h5>
           <p class="card-text">Fresh Toppings and Cheesiest Cheese.</p>
           <a href="{% url 'pizza' %}" class="btn">Customize</a>
-          <a href="#" class="btn">Add to Cart</a>
+          <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card centered-card" style="width: 18rem;">
+        <img src="{% static 'images\Cheesecake.jpg' %}" class="menu-imgs" alt="Chocolate Cheesecake">
+        <div class="card-body">
+          <h5 class="card-title">Chocolate Cheesecake</h5>
+          <p class="card-text">Chocolate Cheesecake by The Italiano.</p>
+          <div class = "centered-text"> <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
+         </div>
         </div>
       </div>
     </div>
@@ -121,31 +148,21 @@
           <h5 class="card-title">Alfredo Pasta</h5>
           <p class="card-text">Alfredo Pasta By Italian Chefs with Unmatched Aroma</p>
           <a href="{% url 'pasta' %}" class="btn" font-size = 12px>Customize</a> 
-          <a href="#" class="btn">Add to Cart</a>
+          <a href="{% url 'cart' %}" class="btn">Add to Cart</a>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4">
-      <div class="card centered-card" style="width: 18rem;">
-        <img src="{% static 'images/Lasagna.jpeg' %}" class="menu-imgs" alt="Lasagna">
-        <div class="card-body">
-          <h5 class="card-title">Lasagna</h5>
-          <p class="card-text">Layered with Deliciousness and Love.</p>
-          <a href="{% url 'lasagna' %}" class="btn">Customize</a>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-
   </div>
-</div>{% endblock %}
-
-
-
-<div class="container"> <!--footer-->
-  <img src="{% static 'images/title back.jpg' %}" alt="title back" class="title-pic">
 </div>
+<div class = "centered-text">
+          <a href="{% url 'menu' %}" class="btn" font-size = 36px>Show Menu</a> <br><br>
+</div>
+{% endblock %}
+
+<div class = "container-card">
+<img src="{% static 'images/footer.jpg' %}" alt="Ingredients" class = "footer-pi">
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

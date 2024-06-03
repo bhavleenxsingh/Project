@@ -1,16 +1,17 @@
 {% extends "app/home.html" %}
 
-{% block title %}Signup{% endblock %}
+{% load static %}
+
+{% block title %}Feedback{% endblock %}
 
 {% block content %}
-<br><br>
+<br>
 <div class="container">
-    <h3>Signup Form</h3>
+    <h3>Feedback</h3>
     <div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-          {{ synup.as_p }}
-            <!-- <button type="submit" class = "btn">Submit Form</button> -->
+          {{ feed.as_p }}
 
 <div id="liveAlertPlaceholder"></div>
                 <button type="submit" class="btn" id="liveAlertBtn">Submit</button>
@@ -23,7 +24,7 @@
             var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
             var wrapper = document.createElement('div');
             wrapper.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert">' +
-                'Form submitted successfully!' +
+                'Feedback submitted successfully!' +
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
                 '<span aria-hidden="true">&times;</span>' +
                 '</button>' +
@@ -35,5 +36,8 @@
         </form>
     </div>
 </div>
-<br> <br>
+
+<div class = "centered-text">
+          <a href="{% url 'home' %}" class="btn" font-size = 36px>Home</a> <br><br>
+</div>
 {% endblock %}

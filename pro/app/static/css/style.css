@@ -31,7 +31,7 @@ body {
         text-align: center;
         justify-content: center;
         font-family:"Luchador", cursive;
-        font-size: 120px;
+        font-size: 80px;
         color: rgb(247, 210, 5);
 
 }
@@ -39,7 +39,7 @@ body {
         text-align: center;
         justify-content: center;
         font-family:"Luchador", cursive;
-        font-size: 60px;
+        font-size: 40px;
         color: rgb(247, 7, 7);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -47,7 +47,7 @@ body {
         text-align: center;
         justify-content: center;
         font-family:  "Pecorino", cursive;
-        font-size: 40px;
+        font-size: 30px;
         color: #fd0303;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -70,7 +70,7 @@ body {
         justify-content: center;
         align-items: center;
         display: inline-block; 
-        margin-top: 33%;
+        margin-top: 15%;
         vertical-align: right; 
         border: 5px solid  #D2B48C;
         padding: 10px; 
@@ -79,14 +79,14 @@ body {
         background-color: #D2B48C;
         width: 33%;
         margin-inline: 30px;
-        margin-bottom: 33%;
+        margin-bottom: 15%;
 
         }
 
 
 .menu-imgs {
         width : 100%;
-        height : 220px;
+        height : 56%;
         object-fit: fill;
         border-radius: 25px;
 }
@@ -101,15 +101,6 @@ body {
     }
 
 
-.title-pic {
-        max-width: 100%; /* Set maximum width to 100% of its container */
-        max-height: 100%; /* Set maximum height to 100% of its container */
-        width: auto; /* Allow the width to adjust proportionally */
-        height: auto; /* Allow the height to adjust proportionally */
-        display: block; /* Ensure the image behaves as a block element */
-        margin: 0 auto;
-
-}
 
 .carousel-pic {
         width: 100%;
@@ -126,16 +117,16 @@ body {
 .footer-pi {
         max-width: 100%; /* Set maximum width to 100% of its container */
         max-height: 100%; /* Set maximum height to 100% of its container */
-        width: auto; /* Allow the width to adjust proportionally */
-        height: auto; /* Allow the height to adjust proportionally */
+        width: 100vw; /* Allow the width to adjust proportionally */
+        height: 300px; /* Allow the height to adjust proportionally */
         display: block; /* Ensure the image behaves as a block element */
         margin: 0 auto;
-
+        object-fit: cover;
 }
 
 .w-100 {
         width: 100% !important;
-        height: 600px;
+        height: 300px;
 }
 
 .background {
@@ -153,6 +144,18 @@ body {
             .responsive-background {
                 background-size: contain; /* Fits the image within the element */
             }
+}
+
+
+.centered-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family:  "Pecorino", cursive;
+        font-size: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 
