@@ -56,7 +56,7 @@ def signup(request):
         synup = signupform(request.POST, request.FILES)
         print(synup)
         if synup.is_valid():
-            print("Form is valid.")
+            print("Form is very valid.")
             password = request.POST.get('Password')
             confirm_password = request.POST.get('Confirm_Password')
             if password == confirm_password:
