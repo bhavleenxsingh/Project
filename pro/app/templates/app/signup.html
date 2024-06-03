@@ -1,0 +1,39 @@
+{% extends "app/home.html" %}
+
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+<br><br>
+<div class="container">
+    <h3>Signup Form</h3>
+    <div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+          {{ synup.as_p }}
+            <!-- <button type="submit" class = "btn">Submit Form</button> -->
+
+<div id="liveAlertPlaceholder"></div>
+                <button type="submit" class="btn" id="liveAlertBtn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('liveAlertBtn').addEventListener('click', function () {
+            var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+            var wrapper = document.createElement('div');
+            wrapper.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert">' +
+                'Form submitted successfully!' +
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+                '</button>' +
+                '</div>';
+
+            alertPlaceholder.append(wrapper);
+        });
+    </script>
+        </form>
+    </div>
+</div>
+<br> <br>
+{% endblock %}
