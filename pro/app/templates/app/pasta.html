@@ -5,11 +5,29 @@
 {% block title %}Alfredo Pasta{% endblock %}
 
 {% block content %}
-<br><br>
-<div>
-<img src="{% static 'images/Alfredo Pasta.jpg' %}" alt="Alfredo Pasta" class = "background">
+<<br><br>
+<div class = "centered-text">
+    <div class="container">
+        <h1>Lasagna</h1><br>
 
-<p> Alfredo Pasta</p>
+
+    </div>
 </div>
+<div class="container">
+<div clas = "center-left-text">
+<div class="form-check form-switch">
+  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Make Extra Creamy &nbsp; &nbsp; &nbsp; ₹ 50 /-</label></h3>
+</div>
+</div>
+</div>
+
 <br><br>
+
+<div class = "centered-text">
+        <a href="{% url 'menu' %}" class="btn">< Back to Menu</a> &nbsp;
+        <a href="{% url 'menu' %}" class="btn">Add to Cart</a> &nbsp;
+        <a href="{% url 'cart' %}" class="btn">Checkout ></a>
+             <br><br>
+</div>
 {% endblock %}

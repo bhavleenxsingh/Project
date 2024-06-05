@@ -28,27 +28,31 @@ body {
 }
 
 .heading {
+        background-color: rgb(253, 249, 249); 
+        padding: 1px;
         text-align: center;
         justify-content: center;
         font-family:"Luchador", cursive;
         font-size: 80px;
-        color: rgb(247, 210, 5);
+        color: rgb(154, 139, 74);
 
 }
 .heading1 {
+        background-color: rgb(253, 249, 249); 
         text-align: center;
         justify-content: center;
         font-family:"Luchador", cursive;
         font-size: 40px;
-        color: rgb(247, 7, 7);
+        color: rgb(156, 174, 175);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 .heading2 {
+        background-color: rgb(253, 249, 249); 
         text-align: center;
         justify-content: center;
         font-family:  "Pecorino", cursive;
         font-size: 30px;
-        color: #fd0303;
+        color: #f3a809;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -158,4 +162,25 @@ body {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+
+.form-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family:  "Pecorino", cursive;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.center-left-text {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        font-family:  "Pecorino", cursive;
+        font-size: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 

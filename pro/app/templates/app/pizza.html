@@ -6,10 +6,39 @@
 
 {% block content %}
 <br><br>
-<div>
-<img src="{% static 'images/Pizza.jpg' %}" alt="Pizza" class = "background">
-
-<p> Pizza</p>
+<div class = "centered-text">
+    <div class="container">
+        <h1>Pizza</h1><br>
+    </div>
 </div>
+    <div class="container">
+
+<div clas = "center-left-text">
+<h3>Toppings - &nbsp; (Golden Corn, Capsicum, Black-Olives, Mushroom<br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp;Spicy Paneer and Tangy Jalapenos)  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;  &nbsp;  &nbsp;  ₹ 180 /-</h3><br><br>
+
+<div class="form-check form-switch">
+  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp; Add Cheese &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ₹ 40 /-</label></h3>
+</div>
+<div class="form-check form-switch">
+  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp;  Cheese-burst Crust&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ₹ 80 /-</label></h3>
+</div>
+<div class="form-check form-switch">
+  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp; Pan Base &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ₹ 50 /-</label></h3>
+</div>
+</div>
+</div>
+
 <br><br>
+
+<div class = "centered-text">
+        <a href="{% url 'menu' %}" class="btn">< Back to Menu</a> &nbsp;
+        <a href="{% url 'menu' %}" class="btn">Add to Cart</a> &nbsp;
+        <a href="{% url 'cart' %}" class="btn">Checkout ></a>
+             <br><br>
+</div>
 {% endblock %}

@@ -1,20 +1,25 @@
 from django import forms
-from .models import signupf
+from .models import signupmodel
 from .models import feedmodel
+from .models import loginmodel
     
 class signupform(forms.ModelForm):
     class Meta:
-        model = signupf
-        fields = '__all__'
+        model = signupmodel
+        fields = ['Username', 'Password', 'Confirm_Password']
 
-    def clean_password(self):
-        Password = self.get("Password")
-        Confirm_Password = self.get("ConfirmPassword")
-        if Password and Confirm_Password and Password != Confirm_Password:
-            raise forms.ValidationError("Passwords don't match")
-        return Confirm_Password
 
 class feedform(forms.ModelForm):
     class Meta:
         model = feedmodel 
-        fields = '__all__'
+        fields = ['Name','Mobile','Email','Message']
+        
+class loginform(forms.ModelForm):
+    class Meta:
+        model = loginmodel
+        fields = ['Username', 'Password']
+        
+widgets = {
+            'Password': forms.PasswordInput(),
+            'Confirm_Password': forms.PasswordInput(), 
+        }

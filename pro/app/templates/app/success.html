@@ -2,12 +2,20 @@
 
 {% load static %}
 
-{% block title %}Signup Successful{% endblock %}
+<title>Success</title>
+
 
 {% block content %}
-<br><br>
-<h1> SIGNUP COMPLETE </h1>
-<h4> Go To LOGIN Page to Access Your Account!</h4>
-<h2>Bon Appetit...</h2>
+<div class = "centered-text">
+    <div class="container"> <br><br>
+        <h1> SIGNUP COMPLETE </h1>
+        <h4> Go To LOGIN Page to Access Your Account! Bon Appetit...</h4><br>
+        <a href="{% url 'login' %}" class="btn">Login</a><br>
+            <h4>Having Issues Regarding Signup or Login?</h4>
+        <a href="{% url 'contact' %}" class="btn">Contact Us!</a>
+        <br><br>
+
+    </div>
+</div>
 
 {% endblock %}

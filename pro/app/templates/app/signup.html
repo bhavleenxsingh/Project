@@ -4,21 +4,22 @@
 
 {% block content %}
 <br><br>
+<div class = "centered-text">
+<div class = "form-text">
 <div class="container">
-    <h3>Signup Form</h3>
+<h2> Begin to Explore the Deliciousness with an Account Signup !</h2> <br>
     <div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-          {{ synup.as_p }}
-            <!-- <button type="submit" class = "btn">Submit Form</button> -->
-
-
-                <button type="submit" class="btn">Submit</button>
+          {{ synup1.as_p }} 
+            <button type="submit" class="btn">Submit</button> &nbsp; &nbsp;
+            <a href="{% url 'login' %}" class="btn">Login</a>
             </form>
+            </div>
         </div>
     </div>
-
-    <script>
+</div>
+    <!-- <script>
         document.getElementById('liveAlertBtn').addEventListener('click', function () {
             var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
             var wrapper = document.createElement('div');
@@ -31,7 +32,7 @@
 
             alertPlaceholder.append(wrapper);
         });
-    </script>
+    </script> -->
         </form>
     </div>
 </div>

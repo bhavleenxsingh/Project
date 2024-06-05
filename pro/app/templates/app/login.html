@@ -5,5 +5,23 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h1>Login</h1>
+<br><br>
+<div class = "centered-text">
+<div class = "form-text">
+    <div class="container">
+        <h3>Login Form</h3>
+        <div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ loginuser.as_p }} <br>
+                <button type="submit" class="btn">Submit</button> &nbsp;
+                <a href="{% url 'signup' %}" class="btn">Sign Up!</a>
+            </form>
+            <br><br>
+        </div>
+</div>
+    </div>
+</div>
+
+
 {% endblock %}
