@@ -6,6 +6,9 @@
 
 {% block content %}
 <br>
+
+<div class = "centered-text">
+<div class = "form-text">
 <div class="container">
     <h3>Feedback</h3>
     <div>
@@ -35,9 +38,11 @@
     </script>
         </form>
     </div>
-</div>
+</div><br>
 
 <div class = "centered-text">
-          <a href="{% url 'home' %}" class="btn" font-size = 36px>Home</a> <br><br>
+        <a href="{% url 'home' %}" class="btn" font-size = 36px>Home</a> &nbsp;
+        <a href="{% url 'contact' %}" class="btn">Contact Us!</a>
+             <br><br>
 </div>
 {% endblock %}

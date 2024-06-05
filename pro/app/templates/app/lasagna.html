@@ -6,10 +6,29 @@
 
 {% block content %}
 <br><br>
-<div>
-<img src="{% static 'images/Lasagna.jpeg' %}" alt="Lasagna" class = "background">
+<div class = "centered-text">
+    <div class="container">
+        <h1>Lasagna</h1><br>
 
-<p> Lasagna </p>
+
+    </div>
 </div>
+    <div class="container">
+
+<div clas = "center-left-text">
+<div class="form-check form-switch">
+  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Add Extra Cheese &nbsp; &nbsp; &nbsp; ₹ 60 /-</label></h3>
+</div>
+</div>
+</div>
+
 <br><br>
+
+<div class = "centered-text">
+        <a href="{% url 'menu' %}" class="btn">< Back to Menu</a> &nbsp;
+        <a href="{% url 'menu' %}" class="btn">Add to Cart</a> &nbsp;
+        <a href="{% url 'cart' %}" class="btn">Checkout ></a>
+             <br><br>
+</div>
 {% endblock %}
