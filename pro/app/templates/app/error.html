@@ -1,0 +1,24 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>Error</title>
+
+
+{% block content %}
+<div class = "centered-text">
+    <div class="container"> <br><br>
+        <h1>Error Signing In!!</h1><br>
+        <h4> There was an error while accessing your account. <br><br>
+             Kindly Check your Username/Password and try again. &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'login' %}" class="btn">Login</a></h4> <br>
+        <h3>Don't have an account? Create One!! &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'signup' %}" class="btn">Sign Up!</a></h3><br>
+            <h4>Having Issues Regarding Signup or Login?  &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'contact' %}" class="btn">Contact Us!</a></h4>
+        <br><br>
+
+    </div>
+</div>
+
+{% endblock %}
