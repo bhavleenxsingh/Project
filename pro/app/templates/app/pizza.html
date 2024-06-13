@@ -17,21 +17,21 @@
 <h3>Toppings - &nbsp; (Golden Corn, Capsicum, Black-Olives, Mushroom<br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp;Spicy Paneer and Tangy Jalapenos)  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;  &nbsp;  &nbsp;  ₹ 180 /-</h3><br><br>
+</div>
+</div>
+<!-- templates/product_list.html -->
+{% for product in products %}
+<div>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>${{ product.price }}</p>
+    <form action="{% url 'add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+{% endfor %}
 
-<div class="form-check form-switch">
-  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp; Add Cheese &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ₹ 40 /-</label></h3>
-</div>
-<div class="form-check form-switch">
-  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp;  Cheese-burst Crust&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ₹ 80 /-</label></h3>
-</div>
-<div class="form-check form-switch">
-  <h3><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault"> &nbsp; Pan Base &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ₹ 50 /-</label></h3>
-</div>
-</div>
-</div>
 
 <br><br>
 

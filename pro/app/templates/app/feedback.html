@@ -15,33 +15,15 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
           {{ feed.as_p }}
-
-<div id="liveAlertPlaceholder"></div>
-                <button type="submit" class="btn" id="liveAlertBtn">Submit</button>
+                <button type="submit" class="btn">Submit</button>
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('liveAlertBtn').addEventListener('click', function () {
-            var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
-            var wrapper = document.createElement('div');
-            wrapper.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert">' +
-                'Feedback submitted successfully!' +
-                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
-                '<span aria-hidden="true">&times;</span>' +
-                '</button>' +
-                '</div>';
-
-            alertPlaceholder.append(wrapper);
-        });
-    </script>
-        </form>
     </div>
 </div><br>
 
 <div class = "centered-text">
-        <a href="{% url 'home' %}" class="btn" font-size = 36px>Home</a> &nbsp;
+        <a href="{% url 'home' %}" class="btn" font-size = 36px>Home</a> &nbsp; &nbsp; &nbsp;
         <a href="{% url 'contact' %}" class="btn">Contact Us!</a>
              <br><br>
 </div>

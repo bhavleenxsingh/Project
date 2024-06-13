@@ -1,0 +1,22 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>Error</title>
+
+
+{% block content %}
+<div class = "centered-text">
+    <div class="container"> <br><br>
+        <h1>Invalid Form</Form></h1>
+        <h4> Entered Username or password is invalid.<br>
+             Kindly Check your Username/Password and try again.</h4><br>
+        <a href="{% url 'login' %}" class="btn">Login</a><br><br>
+            <h4>Having Issues Regarding Signup or Login?</h4><br>    
+        <a href="{% url 'contact' %}" class="btn">Contact Us!</a>
+        <br><br>
+
+    </div>
+</div>
+
+{% endblock %}

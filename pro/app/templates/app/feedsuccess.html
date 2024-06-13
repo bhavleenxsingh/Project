@@ -5,8 +5,20 @@
 {% block title %}Your Cart{% endblock %}
 
 {% block content %}
+<br>
+<div class = "centered-text">
+    <h2>Feedback submitted successfully.</h2><br>
+</div>
+<br>
+<div class = "centered-text">
+    <h3>Thank you for your valuable time.</h3>
+</div>
+<br>
 
-<h1>Feedback submitted successfully.</h1>
-<h2>Thank you for your valuable time.</h2>
-
+<div class = "centered-text">
+        <a href="{% url 'home' %}" class="btn">Home</a> &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'contact' %}" class="btn">Contact Us!</a> &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'login' %}" class="btn">Login</a> &nbsp; &nbsp; &nbsp;   
+             <br><br>
+</div>
 {% endblock %}
